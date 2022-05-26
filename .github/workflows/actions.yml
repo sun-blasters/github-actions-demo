@@ -12,12 +12,19 @@ on:
   push:
     branches:
       - master
+    paths:
+      - "**.js"
+      
 
   pull_request:
     branches:
       - master
       - 'feature/*'
       - 'feature/**'
+
+    tags:
+      - v1.*
+  
 
 jobs:
   run-github-actions:
