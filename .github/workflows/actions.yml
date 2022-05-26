@@ -3,11 +3,21 @@ name: github actions
 on: 
   # schedule:
   #   - cron: "0 12 1 * *"
-  repository_dispatch:
-    types: [build]
+  # repository_dispatch:
+  #   types: [build]
+  # push:
+  # pull_request:
+  #   types: [closed, assigned, opened, reopened]
+
   push:
+    branches:
+      - master
+
   pull_request:
-    types: [closed, assigned, opened, reopened]
+    branches:
+      - master
+      - 'feature/*'
+      - 'feature/**'
 
 jobs:
   run-github-actions:
