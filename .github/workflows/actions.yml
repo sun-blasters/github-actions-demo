@@ -9,11 +9,11 @@ on:
   # pull_request:
   #   types: [closed, assigned, opened, reopened]
 
-  push:
-    branches:
-      - master
-    paths:
-      - "**.js"
+  # push:
+  #   branches:
+  #     - master
+  #   paths:
+  #     - "**.js"
       
 
   pull_request:
